@@ -1,21 +1,34 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cadence</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <aside>
-      <h1>Cadence</h1>
-      <button data-screen="today">Today</button>
-      <button data-screen="routine">Routine</button>
-      <button data-screen="insights">Insights</button>
-      <button data-screen="calendars">Calendars</button>
-      <button data-screen="settings">Settings</button>
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">&#9711;</span>
+        <span class="logo-text">Cadence</span>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-screen="today">&#127775; Today</button>
+        <button class="nav-btn" data-screen="routine">&#128197; Routine</button>
+        <button class="nav-btn" data-screen="insights">&#128200; Insights</button>
+        <button class="nav-btn" data-screen="calendars">&#128279; Calendars</button>
+        <button class="nav-btn" data-screen="settings">&#9881; Settings</button>
+      </nav>
+      <div class="mode-panel">
+        <label for="mode-select">Focus mode</label>
+        <select id="mode-select">
+          <option value="Normal">Normal</option>
+          <option value="Essentials">Essentials</option>
+          <option value="Quiet">Quiet</option>
+        </select>
+      </div>
     </aside>
-    <main id="app"></main>
+    <main id="app" role="main" aria-live="polite"></main>
     <script type="module" src="main.js"></script>
   </body>
 </html>
