@@ -1,11 +1,10 @@
 //! Tauri IPC commands exposed to the frontend.
 
 use crate::{
-    domain::{Category, FocusMode, Status, Task, Timing, completion_points, goal_streak, level},
+    domain::{Timing, completion_points, goal_streak, level},
     store::Store,
 };
-use anyhow::Result;
-use chrono::{NaiveDate, Utc};
+use chrono::Utc;
 use serde::{Deserialize, Serialize};
 use std::sync::{Arc, Mutex};
 use uuid::Uuid;
